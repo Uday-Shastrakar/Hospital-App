@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: hospital
+  datasource:
+    url: jdbc:mysql://localhost:3306/hospital
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

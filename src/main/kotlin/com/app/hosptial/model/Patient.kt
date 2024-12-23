@@ -13,5 +13,6 @@ data class Patient(
     val name: String,
     val doctorName: String,
     val nurseName: String,
-    val visitTime: String // Time when doctor/nurse will visit
+    val visitTime: String, // Time when doctor/nurse will visit
+    val roomNumber: Number
 )
