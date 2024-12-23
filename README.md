@@ -44,5 +44,5 @@ To run the project locally, you need to have the following installed:
 Clone the backend repository:
 
 ```bash
-git clone https://github.com/your-username/hospital-tablet-display-backend.git
+https://github.com/Uday-Shastrakar/Hospital-App.git
 cd hospital-tablet-display-backend
