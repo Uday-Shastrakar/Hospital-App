@@ -6,13 +6,10 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
 @Entity
-data class Patient(
+data class Admin(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
-    val name: String,
-    val doctorName: String,
-    val nurseName: String,
-    val visitTime: String, // Time when doctor/nurse will visit
-    val roomNumber: String
+    val username: String,
+    val password: String // You should ideally hash the password in real applications
 )
