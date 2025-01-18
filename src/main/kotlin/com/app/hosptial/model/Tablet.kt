@@ -7,15 +7,17 @@ import jakarta.persistence.Id
 import jakarta.persistence.JoinColumn
 import jakarta.persistence.ManyToOne
 
+
+
 @Entity
 data class Tablet(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
-    val roomNumber: String,
-    val password: String,
+
+    val password: String,  // Encrypted password stored here
 
     @ManyToOne
-    @JoinColumn(name = "patient_id")
-    val patient: Patient? = null
+    @JoinColumn(name = "room_id")
+    val room: Room  // Room associated with this tablet
 )

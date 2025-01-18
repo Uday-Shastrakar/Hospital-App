@@ -1,9 +1,6 @@
 package com.app.hosptial.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
 
 @Entity
 data class Patient(
@@ -11,8 +8,10 @@ data class Patient(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
     val name: String,
-    val doctorName: String,
-    val nurseName: String,
-    val visitTime: String, // Time when doctor/nurse will visit
-    val roomNumber: String
+    val age: Int,
+    val disease: String,
+
+    @OneToOne
+    @JoinColumn(name = "room_id")
+    val room: Room
 )
